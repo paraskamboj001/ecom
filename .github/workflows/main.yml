@@ -1,4 +1,5 @@
 name: Deploy to AWS
+
 on:
   push:
     branches:
@@ -12,17 +13,31 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # Specify the Node.js version you need
+
+    - name: Install dependencies
+      run: |
+        npm install
+
+    - name: Build project
+      run: |
+        npm run build  # Replace with your build script, if different
+
     - name: Set up SSH key
       uses: webfactory/ssh-agent@v0.5.3
       with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY}}
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         # You'll need to add the corresponding public key to your AWS server's authorized_keys files
 
     - name: Deploy to AWS
       run: |
-        ssh -o StrictHostKeyChecking=no -i $HOME/.ssh/ ubuntu@3.110.204.242 "
+        ssh -o StrictHostKeyChecking=no -i $HOME/.ssh/ubuntu@3.110.204.242 "
         cd /var/www/html/ecom
         sudo git add .
-        sudo git commit -m "servercommit"
-        sudo git pull origin master 
+        sudo git commit -m 'servercommit'
+        sudo git pull origin master
         sudo systemctl restart nginx"
+
