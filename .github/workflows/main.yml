@@ -24,4 +24,5 @@ jobs:
         cd /var/www/html/ecom
         sudo git add .
         sudo git commit -m "servercommit"
-        sudo git pull origin master "
+        sudo git pull origin master 
+        sudo systemctl restart nginx"
