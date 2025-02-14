@@ -38,7 +38,7 @@ const Header = () => {
         </Link>
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center text-white">
           <Link to={"/"} className="mr-5 hover:text-yellow-500 ">
-            Home
+            ParasSoftuvo
           </Link>
           <Link to={"/ProductPage"} className="mr-5 hover:text-yellow-500 ">
             Product
