@@ -31,16 +31,16 @@ const Footer = () => {
         </h2>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-gray-400 hover:text-white">First Link</a>
+            <a className="text-gray-400 hover:text-white">First </a>
           </li>
           <li>
-            <a className="text-gray-400 hover:text-white">Second Link</a>
+            <a className="text-gray-400 hover:text-white">Second </a>
           </li>
           <li>
-            <a className="text-gray-400 hover:text-white">Third Link</a>
+            <a className="text-gray-400 hover:text-white">Third </a>
           </li>
           <li>
-            <a className="text-gray-400 hover:text-white">Fourth Link</a>
+            <a className="text-gray-400 hover:text-white">Fourth </a>
           </li>
         </nav>
       </div>
