@@ -18,7 +18,7 @@ const Footer = () => {
         >
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
         </svg>
-        <span className="ml-3 text-xl">Ecommerce</span>
+        <span className="ml-3 text-xl">Softuvo Ecommerce</span>
       </a>
       <p className="mt-2 text-sm text-gray-500">
         Air plant banjo lyft occupy retro adaptogen indego
